@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Verinium Payment</title>
+  <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body>
+
+  <form name="paymentForm" id="paymentForm">
+    <fieldset>
+
+      <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="to_middle_align">
+        <div class="toalign">
+          <div class="total">
+            <label for="total" class="label_column total--label">Total</label>
+            <label for="usd" class="label_column usd">$</label><input onkeypress="return isNumberKeyOrDecimal(event)"
+              inputmode="numeric" name="AMOUNT" id="myinput" class="moneyEnter" /><label for="myinput"
+              class="superscriptText"><sup>USD</sup></label>
+            <!-- <label for="usd" class="label_column usd"><sup>USD</sup></label> -->
+          </div>
+          <div class="names">
+            <input type="text" id="fname" name="fname" class="first_label first_name" placeholder="First name" required
+              oninput="changeText()">
+            <input type="text" id="lname" name="lname" placeholder="Last name" class="first_label last_name" required
+              oninput="changeTextLname()"><br><br>
+          </div>
+          <div class="numbers">
+            <input type="text" id="card" onkeypress="return isNumberKeyOrDash(event)" value="1234-5678-1234-" name="PAN"
+              placeholder="Card number" class="second_line card_number" required oninput="changeCardNumber()">
+            <input type="text" inputmode="numeric" onkeypress="return isNumberKey(event)" id="cvv" name="CVV"
+              placeholder="CVV" class="second_line cvv_number" required oninput="changeCVVNumber()"><br><br>
+          </div>
+
+          <div class="images_cards">
+            <div class="third_line image_holder">
+              <img src="../images/mastercard.jpg" height="200" width="200">
+              <img src="../images/visa.png" height="200" width="200">
+              <img src="../images/americanexpress.jpg" height="200" width="200">
+              <img src="../images/maestro.png" height="200" width="200">
+              <img src="../images/dinersclub.png" height="200" width="200">
+              <img src="../images/Discover.jpg" height="200" width="200">
+              <img src="../images/unionnpay.png" height="200" width="200">
+              <img src="../images/uatp.png" height="200" width="200">
+              <!-- <section class="next_line--section"> -->
+              <img src="../images/cartasi.png" height="200" width="200" class="another_line">
+              <img src="../images/dankort.jpg" height="200" width="200" class="same_line">
+              <img src="../images/jcb.png" height="200" width="200" class="same_line">
+              <!-- </section> -->
+            </div>
+            <input type="text" name="DATE" onkeypress="return isNumberKeyOrSlash(event)" placeholder="MM / YY" id="mmyy"
+              title="Enter a date in this format MM / YY" class="third_line date" required oninput="changeDate()" />
+            <!-- <input type="date" id="mmyy" name="mmyy" placeholder="MM / YY" class="third_line date"><br><br> -->
+          </div>
+          <div class="button_holder">
+
+            <input type="button" value="SUBMIT PAYMENT" class="submit_button" onclick="sendForm()">
+
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <script src="../js/field_actions.js">
+  </script>
+
+
+</body>

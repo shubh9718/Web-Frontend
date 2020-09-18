@@ -1,0 +1,291 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html{
+    
+    height: 100%;
+}
+form{
+    
+    height: 90%;
+}
+fieldset{
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255);
+    -moz-box-shadow: 0 0 10px rgb(192, 192, 192);
+    -webkit-box-shadow: 0 0 10px rgb(192, 192, 192);
+    box-shadow: 0 0 10px rgb(192, 192, 192);
+}
+/* .to_middle_align{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);   
+  
+} */
+.container {
+  position: absolute;
+  box-sizing: border-box;
+  cursor: pointer;
+  top: 1rem;
+  right: 1.5rem;
+  margin-top: 1.5rem;
+  margin-right: 2rem;
+}
+
+
+.total{
+  display: flex;
+  margin: 5rem 2rem 2rem 2rem;
+  border: 1px solid rgb(202, 198, 198);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+
+.label_column{
+  padding: 10px;
+  padding-bottom: 0;
+  width: 100%;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+}
+
+.usd{
+  text-align: right;
+}
+.moneyEnter{
+  border: 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  width: 15%;
+}
+
+.superscriptText{
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+}
+.names{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 2rem 2rem 2rem;
+}
+
+
+.first_label{
+  padding: 5px;
+}
+
+.last_name,
+.first_name{
+  display: inline-block;
+  width: 50%;
+  border-color: rgb(202, 198, 198);
+  border-width: 1px;
+  border-top-width: 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
+}
+.first_name{
+  margin-right: 15px;
+  background: white url(../images/dormanttick.png) right no-repeat;
+}
+
+.last_name{
+  background: white url(../images/dormanttick.png) right no-repeat;
+}
+
+.numbers{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 2rem 2rem 2rem;
+}
+
+.second_line{
+  padding: 5px;
+  width: 80%;
+}
+
+ 
+
+.card_number,
+.cvv_number{
+  display: inline-block;
+  background: white url(../images/dormanttick.png) right no-repeat;
+  border-color: rgb(202, 198, 198);
+  border-width: 1px;
+  border-top-width: 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+
+
+.card_number{
+  margin-right: 15px;
+  width: 70%;
+  padding-left: 40px;
+  
+}
+#card{
+  background-image: url(../images/creditCardDormant.png), url(../images/dormanttick.png) ;
+  background-position: left, right;
+  background-size: 30px;
+}
+
+#cvv{
+  background-image: url(../images/cvvDormant.png), url(../images/dormanttick.png) ;
+  background-position: left, right;
+  background-size: 30px;
+}
+.cvv_number{
+  width: 30%;
+  padding-left: 40px;
+}
+  
+.images_cards{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 2rem 2rem 2rem;
+  
+}
+
+.third_line{
+  padding: 5px;
+  width: 80%;
+}
+
+.image_holder{
+  margin-right: 15px;
+  width: 70%;
+ 
+}
+
+.image_holder img{
+  margin: 4px;
+ width: 45px;
+ height: 18px;
+}
+
+.date{
+  width: 30%;
+  display: inline-block;
+  background: white url(../images/dormanttick.png) right no-repeat;
+  border-color: rgb(202, 198, 198);
+  border-width: 1px;
+  border-top-width: 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.button_holder{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 2rem 2rem 2rem;
+
+}
+.submit_button{
+  color: white;
+  background-color: rgb(157, 199, 113);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  height: 3rem;
+  width: 100%;
+}
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  @media (max-width: 657px) {
+   
+    .moneyEnter{
+      width: 80%;
+      text-align: center;
+    }
+
+    .images_cards{
+      display: block;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      /* optional */
+      -webkit-box-align: start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      align-items: flex-start;
+    }
+    .image_holder{
+      width: 100%;
+      -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+    }
+    .date{
+      width: 100%;
+      -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+    margin-bottom: 2rem;
+    }
+    .numbers{
+      display: block;
+    }
+   
+    .card_number{
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .cvv_number{
+      width: 100%;
+    }
+    .numbers{
+      margin-bottom: 1rem;
+    }
+ }
