@@ -90,15 +90,15 @@ function sendForm() {
         console.log(this.responseText);
       }
     });
-    xhr.open("POST", "your_URL?PAN=" + newPan + "&AMOUNT=" + amount + "&DATE=" + newDate + "&CVV=" + cvv);
-    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.open("POST", "https://ilhezb32qg.execute-api.eu-west-1.amazonaws.com/dev/Tx/initiate?PAN=" + newPan + "&AMOUNT=" + amount + "&DATE=" + newDate + "&CVV=" + cvv + "&PLATFORM=arn:aws:sns:eu-west-1:627338655066:app/GCM/verinium_gcm_application");
+    // xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(data);
     xhr.onreadystatechange = function () {
       if (xhr.readyState == XMLHttpRequest.DONE) {
         var status = xhr.status;
         if (status === 0 || (status >= 200 && status < 400)) {
           var txnid = xhr.responseText
-          
+          localStorage.setItem("txnid", txnid);
           window.location.href = "../html/payment_processing.html";
         }
         else {
@@ -122,7 +122,8 @@ function processPayment() {
   });
   var pan = localStorage.getItem("newPan")
   try {
-    //perform some operation
+    var txnId = localStorage.getItem("txnid")
+    txnId = txnId.slice(9, txnId.length - 2);
   }
   catch{
     var redirect = confirm("Invalid Transaction. No Transaction ID. Closing window.");
@@ -136,7 +137,7 @@ function processPayment() {
   }
   timer = setInterval(function () {
     counter = counter + 1
-    xhr.open("POST", "your_URL?PAN=" + pan);
+    xhr.open("POST", "https://ilhezb32qg.execute-api.eu-west-1.amazonaws.com/dev/Tx/getState?PAN=" + pan + "&TxID=" + txnId);
     xhr.send();
     xhr.onreadystatechange = function () {
       if (xhr.readyState == XMLHttpRequest.DONE) {

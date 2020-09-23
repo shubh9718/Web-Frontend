@@ -15,27 +15,30 @@ form{
 fieldset{
     margin: 10px;
     padding: 10px;
-    height: 100%;
+    height: 80%;
+    width: 90%;
     border: 1px solid rgba(255, 255, 255);
     -moz-box-shadow: 0 0 10px rgb(192, 192, 192);
     -webkit-box-shadow: 0 0 10px rgb(192, 192, 192);
     box-shadow: 0 0 10px rgb(192, 192, 192);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* height: 100%;
+    border: 1px solid rgba(255, 255, 255);
+    -moz-box-shadow: 0 0 10px rgb(192, 192, 192);
+    -webkit-box-shadow: 0 0 10px rgb(192, 192, 192);
+    box-shadow: 0 0 10px rgb(192, 192, 192); */
 }
-/* .to_middle_align{
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);   
-  
-} */
+
 .container {
   position: absolute;
   box-sizing: border-box;
   cursor: pointer;
   top: 1rem;
-  right: 1.5rem;
-  margin-top: 1.5rem;
+  right: 1rem;
+  margin-top: 1.0rem;
   margin-right: 2rem;
 }
 
@@ -192,6 +195,7 @@ fieldset{
   -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 10px;
+  height: 2.5rem;
 }
 
 .button_holder{
@@ -209,6 +213,9 @@ fieldset{
   border: none;
   height: 3rem;
   width: 100%;
+}
+.submit_button:hover{
+  cursor: pointer;
 }
   .bar1, .bar2, .bar3 {
     width: 35px;
@@ -232,7 +239,18 @@ fieldset{
   }
 
   @media (max-width: 657px) {
-   
+    fieldset{
+      margin: 10px;
+      padding: 10px;
+      height: 100%;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255);
+      -moz-box-shadow: 0 0 10px rgb(192, 192, 192);
+      -webkit-box-shadow: 0 0 10px rgb(192, 192, 192);
+      box-shadow: 0 0 10px rgb(192, 192, 192);
+     
+  }
+  
     .moneyEnter{
       width: 80%;
       text-align: center;
@@ -256,6 +274,7 @@ fieldset{
       -ms-flex-align: start;
       -webkit-align-items: flex-start;
       align-items: flex-start;
+      margin-bottom: 0px;
     }
     .image_holder{
       width: 100%;
@@ -288,4 +307,53 @@ fieldset{
     .numbers{
       margin-bottom: 1rem;
     }
+    .submit_button{
+      height: 2rem;
+      width: 100%;
+    }
  }
+ @media (width: 360px){
+  form{
+    
+    height: 100%;
+}
+ }
+
+ @media (width: 320px){
+  form{
+    
+    height: 100%;
+}
+
+.image_holder img{
+  margin: 4px;
+ width: 27px;
+ height: 12px;
+}
+
+.container {
+  top: 0.5rem;
+  margin-top: 1rem;
+}
+.total{
+  display: flex;
+  margin: 4rem 2rem 2rem 2rem;
+  border: 1px solid rgb(202, 198, 198);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+ }
+
+ @media (min-height:800px) and (max-height: 850px){
+    fieldset{
+      height: 80%;
+      /* position: relative; */
+    }
+ }
+ @media (min-height:700px) and (max-height: 799px){
+  fieldset{
+    height: 90%;
+    /* position: relative; */
+  }
+}
